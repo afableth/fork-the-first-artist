@@ -1,0 +1,30 @@
+{
+  "name": "@oso/ens",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ENS artist subnames: claim API with wallet-signature proof, resolver records (Hedera payout account, agent URL, profile URL), HCS claim audit log",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/claim-api.ts",
+    "dev": "node --watch src/claim-api.ts",
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "issue": "node scripts/issue.ts",
+    "resolve": "node scripts/resolve.ts",
+    "deploy-parent": "node scripts/deploy-parent.ts",
+    "announce-invite": "node scripts/announce-invite.ts"
+  },
+  "dependencies": {
+    "ethers": "^6.17.0"
+  },
+  "optionalDependencies": {
+    "@hiero-ledger/sdk": "2.90.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}
